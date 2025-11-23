@@ -818,7 +818,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 90%);
   position: absolute;
   inset: 0;
 }
@@ -835,19 +835,23 @@ section,
 
 .hero h2 {
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 70px;
   font-weight: 700;
   animation: fadeInDown 1s both;
 }
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 30px;
+    font-size: 60px;
   }
 }
 
 .hero p {
   animation: fadeInDown 1s both 0.2s;
+  font-size: 30px;
+  font-weight: 400;
+  font-style: italic;
+  /*font-s*/
 }
 
 @media (min-width: 1024px) {
