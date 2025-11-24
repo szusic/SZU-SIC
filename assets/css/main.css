@@ -1016,7 +1016,7 @@ section,
 }
 
 .about .content h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -1072,6 +1072,13 @@ section,
 
 .about .about-images img {
   border-radius: 10px;
+}
+
+.about .biography{
+  font-size: 23px;
+  font-weight: 400;
+  text-align: justify;       /* 两端对齐 */
+  text-justify: inter-word;  /* 单词级别两端均匀分布 */
 }
 
 /*--------------------------------------------------------------
