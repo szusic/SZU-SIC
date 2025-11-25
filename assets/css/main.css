@@ -1407,71 +1407,201 @@ section,
 --------------------------------------------------------------*/
 .team {
   --default-color: #ffffff;
+  margin-bottom: -60px !important;
 }
+
+.team .section-left {
+  text-align: left !important;
+}
+
+/* 下划线从左边开始 */
+.team .section-left h2:before {
+  left: 0 !important;
+  right: auto !important;
+  margin: 0 !important;
+  width: 240px !important; /* ← 上面那条细线长度 */
+}
+
+.team .section-left h2::after {
+  left: 0 !important;
+  right: auto !important;
+  margin: 0 !important;
+  width: 120px !important; /* ← 下面那条粗线长度 */
+}
+
 
 .team .member {
   text-align: center;
   position: relative;
   height: 100%;
+  margin-bottom: 30px;
 }
 
+.team .member .member-img {
+  flex: 0 0 40%;     /* 左半边 */
+  height: 250px;                 /* 你要优先保持的高度 */
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+}
+
+.team .member .member-img .avatar-3-4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 信息排版 */
 .team .member .member-info {
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  inset: 0;
-  transition: 0.2s;
+  flex: 1;
+  text-align: left
 }
 
-.team .member .member-info-content {
-  margin-top: -50px;
-  transition: margin 0.2s;
-}
-
-.team .member:hover .member-info {
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  transition: 0.4s;
-}
-
-.team .member:hover .member-info-content {
-  margin-top: 0;
-  transition: margin 0.4s;
-}
-
-.team .member h4 {
-  color: var(--contrast-color);
+.team .member .member-name {
+  font-size: 30px;
   font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
+  margin-bottom: 6px;
 }
 
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
+.team .member .member-title {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 30px;
 }
 
-.team .member .social {
-  margin-top: 15px;
+.team .member .member-research
+{
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+  line-height: 1.4;
+
+}
+.team .member .member-email {
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #444;
+  line-height: 1.4;
 }
 
-.team .member .social a {
-  transition: 0.3s;
-  color: var(--default-color);
+.team .member .member-info strong {
+  font-weight: 600;
 }
 
-.team .member .social a:hover {
-  color: var(--accent-color);
+.team .member .member-more {
+  margin-top: 10px;
 }
 
-.team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+/*!* Social icons *!*/
+/*.member-info .social a {*/
+/*  font-size: 18px;*/
+/*  margin-right: 10px;*/
+/*  color: var(--accent-color);*/
+/*}*/
+
+/*.team .member .member-info {*/
+/*  opacity: 0;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  position: absolute;*/
+/*  inset: 0;*/
+/*  transition: 0.2s;*/
+/*}*/
+
+/*.team .member .member-info-content {*/
+/*  margin-top: -50px;*/
+/*  transition: margin 0.2s;*/
+/*}*/
+
+/*.team .member:hover .member-info {*/
+/*  background: rgba(0, 0, 0, 0.6);*/
+/*  opacity: 1;*/
+/*  transition: 0.4s;*/
+/*}*/
+
+/*.team .member:hover .member-info-content {*/
+/*  margin-top: 0;*/
+/*  transition: margin 0.4s;*/
+/*}*/
+
+/*.team .member h4 {*/
+/*  color: var(--contrast-color);*/
+/*  font-weight: 700;*/
+/*  margin-bottom: 2px;*/
+/*  font-size: 18px;*/
+/*}*/
+
+/*.team .member span {*/
+/*  font-style: italic;*/
+/*  display: block;*/
+/*  font-size: 13px;*/
+/*}*/
+
+/*.team .member .social {*/
+/*  margin-top: 15px;*/
+/*}*/
+
+/*.team .member .social a {*/
+/*  transition: 0.3s;*/
+/*  color: var(--default-color);*/
+/*}*/
+
+/*.team .member .social a:hover {*/
+/*  color: var(--accent-color);*/
+/*}*/
+
+/*.team .member .social i {*/
+/*  font-size: 18px;*/
+/*  margin: 0 2px;*/
+/*}*/
+
+
+/*--------------------------------------------------------------
+# work Section
+--------------------------------------------------------------*/
+.work .crop-16-9 {
+  height: 300px;                 /* 你要优先保持的高度 */
+  /*width: calc(200px * 16 / 9);   !* 根据高度计算 16:9 的宽度 *!*/
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
 }
 
+.work .crop-16-9 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;             /* 关键 */
+}
+
+.work .img-tag-wrapper {
+  position: relative;
+}
+
+.work .img-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #0a4fa8; /* 与你截图一致的蓝色 */
+  color: white;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  z-index: 10;
+}
+
+.work .content{
+  margin-top: 50px;
+}
+
+.work p{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
